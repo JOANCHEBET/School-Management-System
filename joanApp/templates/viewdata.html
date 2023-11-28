@@ -1,0 +1,141 @@
+
+  {% extends 'common.html' %}
+{% load  static %}
+
+{% block main %}
+
+{#<style>#}
+{#   table {#}
+{#  font-family: Arial, Helvetica, sans-serif;#}
+{#  border-collapse: collapse;#}
+{#  width: 80%;#}
+{#}#}
+{##}
+{# td,  th {#}
+{#  border: 1px solid #ddd;#}
+{#  padding: 6px;#}
+{##}
+{#     #}
+{#}#}
+{##}
+{##}
+{#table tr:nth-child(even){background-color: #f2f2f2;}#}
+{##}
+{#table tr:hover {background-color: #ddd;}#}
+{##}
+{#table th {#}
+{#  padding-top: 50px;#}
+{#  padding-bottom: 12px;#}
+{#  text-align: center;#}
+{#  background-color: blueviolet;#}
+{#  color: white;#}
+{#width: 50cm;#}
+{##}
+{#}#}
+{#/* styles.css */#}
+{##}
+{#img {#}
+{#  max-width: 20%;#}
+{#  height: auto;#}
+{#  display: block;#}
+{#  margin: 0 auto;#}
+{#  border: 2px solid #ddd;#}
+{#  border-radius: 8px;#}
+{#  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);#}
+{#}#}
+{##}
+{#img:hover {#}
+{#  opacity: 0.8;#}
+{#}#}
+{##}
+{#</style>#}
+{##}
+{#<table class="table table-success table-striped-columns">#}
+{#<thead >#}
+{#<tr>#}
+{#    <th >Name</th>#}
+{#    <th>Email</th>#}
+{#    <th >Age</th>#}
+{#    <th >Image</th>#}
+{##}
+{#</tr>#}
+{##}
+{#</thead>#}
+{#<tbody>#}
+{##}
+{#{% for students in students %}#}
+{#<tr>#}
+{#    <td>{{ students.name }}</td>#}
+{#    <td>{{ students.email }}</td>#}
+{#    <td>{{ students.age }}</td>#}
+{#    <td>{% if students.image %}#}
+{#     <img src="http://127.0.0.1:8000/media/{{ students.image }}" class="card-img-top" alt="{{ students.name }}">#}
+{##}
+{##}
+{#  <td >#}
+{#      <a class="btn btn-warning button col" href="edit/{{ students.id }}">EDIT</a>#}
+{#          </td>#}
+{##}
+{#          <td>#}
+{#              <a class="btn  btn-danger button danger" href="/delete/{{ students.id }}">DELETE</a>#}
+{##}
+{#          </td>#}
+{#{% endif %}#}
+{##}
+{#      </tr>#}
+{##}
+{#  {% endfor %}#}
+{##}
+{#</tbody>#}
+{##}
+{#</table>#}
+    <style>
+  .mt-5 {
+    margin-top: 5px;
+      margin-left: auto;
+  }
+
+  h2.mt-5 {
+    /* Additional styles for h2 with class mt-5 */
+    /* For example, you can set the font size, color, etc. */
+    font-size: 24px;
+    color: #333;
+  }
+</style>
+
+<h2 class="mt-5"> STUDENTS</h2>
+
+    <div class="row">
+
+        {% for students in students %}
+
+        <div class="col-md-3">
+            <div class="card mb-3">
+             <img src="http://127.0.0.1:8000/media/{{ students.image }}" class="card-img-top" alt="{{ students.name }}">
+                <div class="card-body">
+                <p class="card-text">{{ students.name }}</p>
+                    <p class="card-text">{{ students.email }}</p>
+                    <p class="card-text">{{ students.age }}</p>
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+    <p class="card-text">{{ students.name }}</p>
+    </div>
+
+
+
+
+
+    </div>
+
+<br><br><br><br><br><br><br>
+{% endblock %}
+
+
+
+
+
+
+

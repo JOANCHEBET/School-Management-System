@@ -1,0 +1,263 @@
+{% extends 'common.html' %}
+{% load  static %}
+
+
+
+{% block main %}
+
+ {#      HOME SECTION STARTS HERE ... #}
+
+    <div class="intro-section" id="home-section">
+
+      <div class="slide-1" style="background-image: url('/images/hero_1.jpg');" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <div class="row align-items-center">
+                  {% for school in school %}
+                  <div class="col-lg-6 mb-4">
+                  <h1  data-aos="fade-up" data-aos-delay="100">{{  school.TopMessage }}</h1>
+                  <p class="mb-4"  data-aos="fade-up" data-aos-delay="200">{{  school.paragraph }}</p>
+                  <p data-aos="fade-up" data-aos-delay="300"><a href="{% url 'joanApp:admission.html'%}" class="btn btn-primary py-3 px-5 btn-pill">Admission Now</a></p>
+
+                </div>
+                  {% endfor %}
+
+
+
+                <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="500">
+
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+      {#      HOME SECTION STARTS HERE ... #}
+
+
+    <div class="site-section courses-entry-wrap"  data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
+        <div class="row">
+
+          <div class="owl-carousel col-12 nonloop-block-14">
+
+            <div class="course bg-white h-100 align-self-stretch">
+              <figure class="m-0">
+                <a href="{% url 'joanApp:course.html' %}"><img src="{% static 'images/img_1.jpg' %}" alt="Image" class="img-fluid"></a>
+              </figure>
+              <div class="course-inner-text py-4 px-4">
+                <span class="course-price">KES 20,000</span>
+                <div class="meta"><span class="icon-clock-o"></span>4 Lessons / 12 week</div>
+                <h3><a href="#">Study Law of Physics</a></h3>
+                <p>Studying the laws of physics involves exploring the fundamental principles that govern the behavior of the physical universe, encompassing topics such as classical mechanics, electromagnetism, thermodynamics, quantum mechanics, and relativity, providing a deep understanding of the natural forces and phenomena that shape our world.
+
+
+
+
+
+</p>
+              </div>
+              <div class="d-flex border-top stats">
+                <div class="py-3 px-4"><span class="icon-users"></span> 2,193 students</div>
+                <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 2</div>
+              </div>
+            </div>
+
+            <div class="course bg-white h-100 align-self-stretch">
+              <figure class="m-0">
+                <a href="{% url 'joanApp:course.html'%}" src= "{%static 'images/img_2.jpg' %}" alt="Image" class="img-fluid"></a>
+              </figure>
+              <div class="course-inner-text py-4 px-4">
+                <span class="course-price">KES 40,000</span>
+                <div class="meta"><span class="icon-clock-o"></span>4 Lessons / 12 week</div>
+                <h3><a href="#">Logo Design Course</a></h3>
+                <p>
+"Enroll in our logo design course, where participants receive hands-on training in both the artistic and technical aspects of creating compelling brand identities, ensuring a well-rounded skill set for successful logo design in diverse contexts." </p>
+              </div>
+              <div class="d-flex border-top stats">
+                <div class="py-3 px-4"><span class="icon-users"></span> 2,193 students</div>
+                <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 2</div>
+              </div>
+            </div>
+
+            <div class="course bg-white h-100 align-self-stretch">
+              <figure class="m-0">
+                <a href="{% url 'joanApp:course.html'%}"><img src="{%static 'images/img_3.jpg' %}" alt="Image" class="img-fluid"></a>
+              </figure>
+              <div class="course-inner-text py-4 px-4">
+                <span class="course-price">KES 50,000</span>
+                <div class="meta"><span class="icon-clock-o"></span>4 Lessons / 12 week</div>
+                <h3><a href="#">python Programming Language</a></h3>
+                <p>
+"Python is a versatile and powerful programming language known for its simplicity and readability, making it an ideal choice for beginners and professionals alike, used extensively in web development, data analysis, artificial intelligence, and more." </p>
+              </div>
+              <div class="d-flex border-top stats">
+                <div class="py-3 px-4"><span class="icon-users"></span> 2,193 students</div>
+                <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 2</div>
+              </div>
+            </div>
+
+
+
+            <div class="course bg-white h-100 align-self-stretch">
+              <figure class="m-0">
+                <a href="{% url 'joanApp:course.html'%}"><img src="{%static 'images/img_4.jpg' %}" alt="Image" class="img-fluid"></a>
+              </figure>
+              <div class="course-inner-text py-4 px-4">
+                <span class="course-price">KES 40,000</span>
+                <div class="meta"><span class="icon-clock-o"></span>4 Lessons / 12 week</div>
+                <h3><a href="#">Study Law of Physics</a></h3>
+                <p>
+Studying the laws of physics involves exploring the fundamental principles that govern the behavior of the physical universe, encompassing topics such as classical mechanics, electromagnetism, thermodynamics, quantum mechanics, and relativity, providing a deep understanding of the natural forces and phenomena that shape our world.
+
+
+
+
+
+ </p>
+              </div>
+              <div class="d-flex border-top stats">
+                <div class="py-3 px-4"><span class="icon-users"></span> 2,193 students</div>
+                <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 2</div>
+              </div>
+            </div>
+
+            <div class="course bg-white h-100 align-self-stretch">
+              <figure class="m-0">
+                <a href="{% url 'joanApp:course.html' %}"><img src="{%static 'images/img_5.jpg' %}" alt="Image" class="img-fluid"></a>
+              </figure>
+              <div class="course-inner-text py-4 px-4">
+                <span class="course-price">KES 50,000</span>
+                <div class="meta"><span class="icon-clock-o"></span>4 Lessons / 12 week</div>
+                <h3><a href="#">Logo Design Course</a></h3>
+                <p>"Enroll in our logo design course, where participants receive hands-on training in both the artistic and technical aspects of creating compelling brand identities, ensuring a well-rounded skill set for successful logo design in diverse contexts." </p>
+              </div>
+              <div class="d-flex border-top stats">
+                <div class="py-3 px-4"><span class="icon-users"></span> 2,193 students</div>
+                <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 2</div>
+              </div>
+            </div>
+
+            <div class="course bg-white h-100 align-self-stretch">
+              <figure class="m-0">
+                <a href="{% url 'joanApp:course.html' %}"><img src="{%static 'images/img_6.jpg' %}" alt="Image" class="img-fluid"></a>
+              </figure>
+              <div class="course-inner-text py-4 px-4">
+                <span class="course-price">KES 50,000</span>
+                <div class="meta"><span class="icon-clock-o"></span>4 Lessons / 12 week</div>
+                <h3><a href="#">python Programming Language</a></h3>
+                <p>"Python is a versatile and powerful programming language known for its simplicity and readability, making it an ideal choice for beginners and professionals alike, used extensively in web development, data analysis, artificial intelligence, and more." </p>
+              </div>
+              <div class="d-flex border-top stats">
+                <div class="py-3 px-4"><span class="icon-users"></span> 2,193 students</div>
+                <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 2</div>
+              </div>
+            </div>
+
+          </div>
+
+
+
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-7 text-center">
+            <button class="customPrevBtn btn btn-primary m-1">Prev</button>
+            <button class="customNextBtn btn btn-primary m-1">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+{#      GRADUATION PIC STARTS HERE..#}
+    <div class="site-section bg-image overlay" style="background-image: url('/images/hero_1.jpg');">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-8 text-center testimony">
+            <img src="{% static '/images/person_4.jpg' %}" alt="Image" class="img-fluid w-25 mb-4 rounded-circle">
+            <h3 class="mb-4">Jerome Jensen</h3>
+            <blockquote>
+              <p>&ldquo; "Grateful for the transformative experience, I extend my heartfelt appreciation to Achievers  school for providing not just an education, but a nurturing environment that has equipped me with the skills and memories to embrace the future confidently."</p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      {#      GRADUATION PIC ENDS HERE..#}
+
+    <div class="site-section pb-0">
+
+      <div class="future-blobs">
+        <div class="blob_2">
+          <img src="{% static 'images/blob_2.svg' %}" alt="Image">
+        </div>
+        <div class="blob_1">
+          <img src="{% static 'images/blob_1.svg' %}" alt="Image">
+        </div>
+      </div>
+      <div class="container">
+        <div class="row mb-5 justify-content-center" data-aos="fade-up" data-aos-delay="">
+          <div class="col-lg-7 text-center">
+            <h2 class="section-title">Why Choose Us</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto align-self-start"  data-aos="fade-up" data-aos-delay="100">
+
+            <div class="p-4 rounded bg-white why-choose-us-box">
+
+              <div class="d-flex align-items-center custom-icon-wrap custom-icon-light mb-3">
+                <div class="mr-3"><span class="custom-icon-inner"><span class="icon icon-graduation-cap"></span></span></div>
+                <div><h3 class="m-0">22,931 Yearly Graduates</h3></div>
+              </div>
+
+              <div class="d-flex align-items-center custom-icon-wrap custom-icon-light mb-3">
+                <div class="mr-3"><span class="custom-icon-inner"><span class="icon icon-university"></span></span></div>
+                <div><h3 class="m-0">150 Universities Worldwide</h3></div>
+              </div>
+
+              <div class="d-flex align-items-center custom-icon-wrap custom-icon-light mb-3">
+                <div class="mr-3"><span class="custom-icon-inner"><span class="icon icon-graduation-cap"></span></span></div>
+                <div><h3 class="m-0">Top Professionals in The World</h3></div>
+              </div>
+
+              <div class="d-flex align-items-center custom-icon-wrap custom-icon-light mb-3">
+                <div class="mr-3"><span class="custom-icon-inner"><span class="icon icon-university"></span></span></div>
+                <div><h3 class="m-0">Expand Your Knowledge</h3></div>
+              </div>
+
+              <div class="d-flex align-items-center custom-icon-wrap custom-icon-light mb-3">
+                <div class="mr-3"><span class="custom-icon-inner"><span class="icon icon-graduation-cap"></span></span></div>
+                <div><h3 class="m-0">Best Online Teaching Assistant Courses</h3></div>
+              </div>
+
+              <div class="d-flex align-items-center custom-icon-wrap custom-icon-light">
+                <div class="mr-3"><span class="custom-icon-inner"><span class="icon icon-university"></span></span></div>
+                <div><h3 class="m-0">Best Teachers</h3></div>
+              </div>
+
+            </div>
+
+
+          </div>
+          <div class="col-lg-7 align-self-end"  data-aos="fade-left" data-aos-delay="200">
+            <img src="{% static 'images/person_transparent.png' %}" alt="Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+{% endblock %}

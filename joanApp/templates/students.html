@@ -1,0 +1,54 @@
+
+{% extends 'common.html' %}
+
+{%  load static %}
+
+
+
+{% block main %}
+<style>
+    table{
+        border-collapse: collapse;
+        width: 80%;
+        margin-top: 50px ;
+    }
+    th, td{
+        border: 2px solid black;
+        padding: 10px;
+        text-align: center;
+
+    }
+    th {
+        font-weight: bold;
+    }
+
+    </style>
+
+<table border="2">
+
+<tr>
+    <thead>
+ <th>Name</th>
+ <th>Age</th>
+ <th>Email</th>
+ <th>Grade</th>
+</thead>
+
+</tr>
+{% for students in students %}
+<tr>
+
+    <td>{{ students.name }}</td>
+
+    <td>{{ students.age }}</td>
+    <td>{{ students.email }}</td>
+
+    <td>{{ students.grade }}</td>
+    <td><a href={% url 'joanApp:viewdata.html' %}> DELETE</a></td>
+    <td><a href={% url 'joanApp:viewdata.html' %}> EDIT</a></td>
+</tr>
+
+{% endfor %}
+</table>
+
+{% endblock %}

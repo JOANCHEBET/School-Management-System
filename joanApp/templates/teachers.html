@@ -1,0 +1,79 @@
+  {% extends 'common.html' %}
+{% load  static %}
+
+
+{% block main %}
+{#       TEACHERS SECTION STARTS HERE ...#}
+
+
+
+
+     <div class="site-section" id="teachers-section">
+      <div class="container">
+
+        <div class="row mb-5 justify-content-center">
+          <div class="col-lg-7 mb-5 text-center"  data-aos="fade-up" data-aos-delay="">
+            <h2 class="section-title">Our Teachers</h2>
+            <p class="mb-5">
+Our teachers are dedicated professionals who bring knowledge, passion, and commitment to the classroom. They create an inclusive learning environment, fostering curiosity and critical thinking. Serving as mentors, they guide students on their educational journeys, providing unwavering support and encouragement. Beyond imparting academic knowledge, teachers instill valuable life skills, shaping well-rounded individuals prepared for the future</p>
+          </div>
+        </div>
+
+        <div class="row">
+
+
+     {% for teachers in teacher %}
+
+
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="teacher text-center">
+             <img src="http://127.0.0.1:8000/media/{{ teachers.image }}" class="img-fluid w-50 rounded-circle mx-auto mb-4" alt="{{ teachers.image }}">
+
+              <div class="py-2">
+                <h3 class="text-black">{{ teachers.name}}</h3>
+                <p class="position"> {{ teachers.role}}</p>
+                <p>{{ teachers.description}}.</p>
+              </div>
+            </div>
+          </div>
+
+{% endfor %}
+{##}
+{#          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">#}
+{#            <div class="teacher text-center">#}
+{#              <img src={% static '/images/person_2.jpg' %} alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">#}
+{#              <div class="py-2">#}
+{#                <h3 class="text-black">Joan</h3>#}
+{#                <p class="position">Physics Teacher</p>#}
+{#                <p> Deputy</p>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div>#}
+{##}
+{##}
+{##}
+{#          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">#}
+{#            <div class="teacher text-center">#}
+{#              <img src={% static '/images/person_3.jpg' %} alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">#}
+{#              <div class="py-2">#}
+{#                  <h3 class="text-black">JOY</h3>#}
+{#                <p class="position">Mathematics Teacher</p>#}
+{#                <p>Head</p>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+
+
+
+      {#       TEACHER SECTION ENDS HERE ...#}
+
+
+
+{% endblock %}
+
+</div>
+</div>
+</div>
