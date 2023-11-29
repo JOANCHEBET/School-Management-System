@@ -2,7 +2,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
-from .models import Students, Welcome , Teacher
+from .models import Students, Welcome, Teacher, Course
 from django.contrib import messages
 
 import os
@@ -22,7 +22,9 @@ def home(request):
 
 
 def course(request):
-    return render(request, 'course.html')
+    course = Course.objects.all()
+    context = {'course': course}
+    return render(request, 'course.html',  context)
 
 
 # def teachers(request ):

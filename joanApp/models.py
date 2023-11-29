@@ -22,10 +22,11 @@ class Students(models.Model):
         return self.name
 
 
-class Courses(models.Model):
+class Course(models.Model):
     name=models.CharField(max_length=200,null=True)
     duration=models.IntegerField(default=3,null=True,blank=True)
     fees=models.IntegerField(null=True,blank=True)
+    image = models.ImageField(upload_to='images')
 
     def __str__(self):
         return str(self.name)

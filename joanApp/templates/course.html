@@ -11,28 +11,53 @@
 
             <div class="mb-5">
               <h3 class="text-black">Course Description</h3>
-              <p class="mb-4">
-                <strong class="text-black mr-3">Schedule: </strong> MWF 9:30 - 11:00
-              </p>
+
               <p>"Our comprehensive programs are structured to cover a range of topics in physics,Python Programming andLogo Design.
  The schedule includes engaging lectures, practical hands-on sessions, and collaborative projects. Classes are held twice a year, providing flexibility for students. The program spans duration of 4 months, allowing participants to delve deep into each subject. Explore the schedule below to plan your educational journey."</p>
-     {% for course in Course %}
+<div class="site-section">
 
 
 
-              <div class="row mb-4">
-                <div class="col-md-6">
-                  <img src="http://127.0.0.1:8000/media/{{ Course.image }}" class="img-fluid w-50 rounded-circle mx-auto mb-4" alt="{{ Course.image }}">
-                       <p class="position">{{ Course.name}}</p>
-                     <p class="position">{{ Course.duration}}</p>
-                     <p class="position">{{ Course.fees}}</p>
+    <div class="row">
+
+
+     {% for course in course %}
+
+
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="teacher text-center">
+             <img src="http://127.0.0.1:8000/media/{{ course.image }}" class="img-fluid w-200  mx-auto mb-4" alt="{{ course.image }}">
+
+              <div class="py-2">
+                <h3 class="text-black">{{ course.name}}</h3>
+                <p class="position"> {{ course.description}}</p>
+                <p> Fees:KES {{ course.fees}}.</p>
+              </div>
+            </div>
+          </div>
+
+{% endfor %}
+
+
+</div>
+{#              <div class="row mb-5 justify-content-center">#}
+{#{% for course in course %}#}
+{##}
+{#                <div class="col-md-6">#}
+{##}
+{##}
+{#                  <img src="http://127.0.0.1:8000/media/{{ course.image }}" class="card-img-top"alt="{{ course.image }}">#}
+{#                       <p class="position">COURSE: {{ course.name}}</p>#}
+{#                     <p class="position">Duration: {{ course.duration}} Years</p>#}
+{#                     <p class="position">KES {{ course.fees}}</p>#}
 {#                </div>#}
 {#                <div class="col-md-6">#}
 {#                  <img src="{% static 'images/img_2.jpg' %}" alt="Image" class="img-fluid rounded">#}
 {#                       <p class="position">IT</p>#}
 {#                </div>#}
-              </div>
-                    {% endfor %}
+{##}
+{#              </div>#}
+{#{% endfor %}#}
               <p>
 "Embark on a dynamic academic journey exploring the realms of physics, Python programming, and logo design. This comprehensive program integrates the exploration of fundamental physical laws, hands-on Python coding experiences, and the artistry behind crafting compelling logos, empowering students with a well-rounded skill set for a diverse range of intellectual and creative pursuits."</p>
 
@@ -50,4 +75,5 @@
     </div>
 
 {% endblock %}
+</div>
 </div>
